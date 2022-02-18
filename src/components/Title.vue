@@ -1,5 +1,5 @@
 <template>
-  <div class="item title">Leaderbord</div>
+  <div class="item title">Leaderbord lolooo</div>
 </template>
 
 <script>
