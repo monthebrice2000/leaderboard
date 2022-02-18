@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Title />
+  <Params @search="search"/>
+  <Leaders :day="day"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Title from "./components/Title.vue";
+import Params from "@/components/Params";
+import Leaders from "@/components/Leaders";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Title,
+    Params,
+    Leaders,
+  },
+  data : function(){
+    return {
+      day : 31,
+    }
+  },
+  methods : {
+    search( day_ ){
+      this.day = day_;
+      console.log(day_ , typeof day_ )
+    }
   }
-}
+};
+
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
